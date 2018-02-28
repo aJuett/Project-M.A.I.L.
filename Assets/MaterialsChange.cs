@@ -33,7 +33,7 @@ public class MaterialsChange : MonoBehaviour {
 
     public void OnCollisionEnter(Collision col)
     {
-        if (col.gameObject.tag == "Player")
+        if (col.gameObject.tag == "Don'tBlackHole")
         {
             ChangeMat();
         }
