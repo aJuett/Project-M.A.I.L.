@@ -23,7 +23,17 @@ public class MaterialsChange : MonoBehaviour {
             if (GetComponent<MeshRenderer>().material.color != secondColor)
             GetComponent<MeshRenderer>().material.color = Color.Lerp(GetComponent<MeshRenderer>().material.color, secondColor, step);
         }
+        /*
         if (Input.anyKey)
+        {
+            ChangeMat();
+        } 
+        */
+    }
+
+    public void OnCollisionEnter(Collision col)
+    {
+        if (col.gameObject.tag == "Player")
         {
             ChangeMat();
         }

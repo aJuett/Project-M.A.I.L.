@@ -4,13 +4,30 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-		
+    public float speed;
+
+    private Rigidbody rb;
+
+    void Start()
+    {
+        rb = GetComponent<Rigidbody>();
+    }
+
+
+    // Update is called once per frame
+    void Update ()
+    {
+        float moveHorizontal = Input.GetAxis("Horizontal");
+        float moveVertical = Input.GetAxis("Vertical");
+
+        Vector3 movement = new Vector3(moveHorizontal, 0.0f, moveVertical);
+
+        rb.AddForce(movement * speed);
+
+        if (Input.GetKeyDown(KeyCode.D))
+        {
+            
+        }
+    }
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
-}
+
