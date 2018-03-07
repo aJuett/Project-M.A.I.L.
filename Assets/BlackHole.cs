@@ -10,13 +10,10 @@ public class BlackHole : MonoBehaviour {
     float destroyDelay = 0.2f;
     int index;
 
-    // Use this for initialization
     void Start () {
         WorldDotDistort();
-
     }
-	
-	// Update is called once per frame
+
 	void Update () {
 		if (enteringHole)
         {
